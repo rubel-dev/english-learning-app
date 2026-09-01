@@ -8,13 +8,13 @@ from sqlalchemy.orm import Session
 from app.db.session import get_db
 from app.api.deps import get_current_user
 
-from backend.app.modules.users.models.user import User
-from backend.app.modules.vocabulary.models.vocabulary_learning_content import VocabularyLearningContent
-from backend.app.modules.vocabulary.models.user_vocabulary import UserVocabulary
+from app.modules.users.models.user import User
+from app.modules.vocabulary.models.vocabulary_learning_content import VocabularyLearningContent
+from app.modules.vocabulary.models.user_vocabulary import UserVocabulary
 
-from backend.app.modules.vocabulary.schemas.vocabulary_schema import TodayVocabularyResponse, UserVocabularyResponse, VocabularyReviewCreate
-from backend.app.modules.vocabulary.models.vocabulary import Vocabulary
-from backend.app.modules.vocabulary.models.vocabulary_review import VocabularyReview
+from app.modules.vocabulary.schemas.vocabulary_schema import TodayVocabularyResponse, UserVocabularyResponse, VocabularyReviewCreate
+from app.modules.vocabulary.models.vocabulary import Vocabulary
+from app.modules.vocabulary.models.vocabulary_review import VocabularyReview
 
 
 router = APIRouter(

@@ -3,20 +3,20 @@ from datetime import datetime, timedelta, timezone
 from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy import func
 from sqlalchemy.orm import Session
-from backend.app.integrations.llm.reading.explanation import generate_sentence_explanation, generate_vocabulary_explanation
-from backend.app.modules.reading.schemas.reading_schema import ReadingAnswerCreate, ReadingExplanationResponse, ReadingStatusCreate, ReadingSubmitCreate, ReadingUserResponse, ReviewDays, TextTypes
+from app.integrations.llm.reading.explanation import generate_sentence_explanation, generate_vocabulary_explanation
+from app.modules.reading.schemas.reading_schema import ReadingAnswerCreate, ReadingExplanationResponse, ReadingStatusCreate, ReadingSubmitCreate, ReadingUserResponse, ReviewDays, TextTypes
 from app.db.session import get_db
 from app.api.deps import get_current_user
-from backend.app.modules.users.models.user import User
-from backend.app.modules.assessment.models.assessment_result import AssessmentResult
-from backend.app.modules.reading.models.reading import Reading
-from backend.app.modules.reading.models.reading_result import ReadingResult
-from backend.app.modules.reading.models.reading_session import ReadingSession
+from app.modules.users.models.user import User
+from app.modules.assessment.models.assessment_result import AssessmentResult
+from app.modules.reading.models.reading import Reading
+from app.modules.reading.models.reading_result import ReadingResult
+from app.modules.reading.models.reading_session import ReadingSession
 from uuid import UUID
 
-from backend.app.modules.reading.models.reading_answer import ReadingAnswer
+from app.modules.reading.models.reading_answer import ReadingAnswer
  
-from backend.app.modules.reading.models.global_ai_explanation import GlobalAiExplanation
+from app.modules.reading.models.global_ai_explanation import GlobalAiExplanation
 from openai import OpenAI
 from app.core.config import settings
 from app.utils.text import extract_sentence

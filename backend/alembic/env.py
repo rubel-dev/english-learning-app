@@ -3,7 +3,11 @@ from logging.config import fileConfig
 from sqlalchemy import engine_from_config
 from sqlalchemy import pool
 from app.db.base import Base
-from app import models
+from app.modules.listening import models as listening_models
+from app.modules.reading import models as reading_models
+from app.modules.users import models as user_models
+from app.modules.vocabulary import models as vocabulary_models
+from app.modules.writing import models as writing_models
 from alembic import context
 from app.core.config import settings
 # this is the Alembic Config object, which provides
